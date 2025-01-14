@@ -70,7 +70,7 @@
     \ifluatex\tutextrue\else\tutexfalse\fi
   \fi
 }{}
-\iftutex 
+\iftutex
   \RequirePackage{fontspec}
 \else
   %% v1.3.2 attempts to make ligatures
@@ -157,7 +157,7 @@
 %% v1.6: Use accsupp so that when copying/pasting the icon from PDF to a text
 %%       file, the icon name is pasted
 %% v1.7: Some tweaks/corrections so that accsupp is for icons only
-%% v1.7.1: Bugfix to support some symbol commands e.g. academicons commands 
+%% v1.7.1: Bugfix to support some symbol commands e.g. academicons commands
 \ExplSyntaxOn
 \NewDocumentCommand{\printinfo}{m m o}{%
   \IfNoValueTF{#3}{%
@@ -324,12 +324,12 @@
   \textbf{\color{accent}#2}\par
   \smallskip}
   \ifstrequal{#3}{}{}{%
-    {\small\makebox[0.5\linewidth][l]%
+    {\small\makebox[0.6\linewidth][l]%
       {\BeginAccSupp{method=pdfstringdef,ActualText={\datename:}}\cvDateMarker\EndAccSupp{}%
       ~#3}%
     }}%
   \ifstrequal{#4}{}{}{%
-    {\small\makebox[0.5\linewidth][l]%
+    {\small\makebox[0.4\linewidth][l]%
       {\BeginAccSupp{method=pdfstringdef,ActualText={\locationname:}}\cvLocationMarker\EndAccSupp{}%
         ~#4}%
     }}\par
@@ -471,7 +471,7 @@
     }%
     \iftoggle{boldname}{\textbf{##1}}{##1}%
   }%
-% 
+%
   \renewcommand*{\mkbibnamegiven}[1]{%
     \global\togglefalse{boldname}%
     \foreach \my@fname / \my@gname in \my@namelist{%

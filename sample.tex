@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%
 % This is an sample CV template created using altacv.cls
-% (v1.7.2, 28 August 2024) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.7, 9 August 2023) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
 %
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -15,11 +15,11 @@
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
-%% AltaCV uses the fontawesome5 and simpleicons packages.
-%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/simpleicons for full list of symbols.
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1.25cm,right=1.25cm,top=1cm,bottom=1cm,columnsep=1.2cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -95,28 +95,29 @@
 \addbibresource{sample.bib}
 
 \begin{document}
-\name{Your Name Here}
-\tagline{Your Position or Tagline Here}
+\name{Pierre KETOBIAKOU}
+\tagline{Rust Developer with Expertise in Cybersecurity}
 %% You can add multiple photos on the left or right
-\photoR{2.8cm}{Globe_High}
+% \photoR{2.8cm}{me}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
-  \email{your_name@email.com}
-  \phone{000-00-0000}
-  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  \location{Location, COUNTRY}
-  \homepage{www.homepage.com}
+
+  % \email{ketobiakou@et.esiea.fr}
+  \email{pierre.097@proton.me}
+  \phone{+33 (0)7 82 57 44 62}
+  % \mailaddress{2 bis route des Varennes}
+  \location{PARIS, France}
+  \github{pierre-1997}
+
+  % \homepage{www.homepage.com}
   % \twitter{@twitterhandle}
-  \xtwitter{@x-handle}
-  \linkedin{your_id}
-  \github{your_id}
-  \orcid{0000-0000-0000-0000}
+  % \linkedin{your_id}
+  % \orcid{0000-0000-0000-0000}
   %% You can add your own arbitrary detail with
   %% \printinfo{symbol}{detail}[optional hyperlink prefix]
   % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-
   %% Or you can declare your own field with
   %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
   % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
@@ -136,160 +137,235 @@
 
 \makecvheader
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
+\AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\columnratio{0.5}
 
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Experience}
 
-\cvevent{Job Title 1}{Company 1}{Month 20XX -- Ongoing}{Location}
+\cvevent{Backend Developer}{Blackfoot}{April 2023 -- July 2024}{PARIS, France}
 \begin{itemize}
-\item Job description 1
-\item Job description 2
+  \item Achieved Rust proficiency through designing multi-server backend systems, enhancing application security and performance.
+  \item Led the design and implementation of scalable, secure backend architectures using Rust (actix, tokio, ...) for improved performance.
+  \item Technical stack: kubernetes, GCP, Rust, Linux, Docker, Git, PostgreSQL/MongoDB
 \end{itemize}
 
 \divider
 
-\cvevent{Job Title 2}{Company 2}{Month 20XX -- Ongoing}{Location}
+\cvevent{SOC Architect}{Orange CyberDefense}{March 2021 -- March 2022}{PARIS, France}
 \begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
-
-\cvsection{Projects}
-
-\cvevent{Project 1}{Funding agency/institution}{}{}
-\begin{itemize}
-\item Details
+  \item Orchestrated the development of a SOC for large-scale enterprises, integrating advanced automation to enhance security monitoring and response efficiency. % in collaboration with international teams.
+  % \item Deep understanding of SOC as a service for big companies
+  \item Technical stack: Python, Cortex XSOAR, Docker, Gitlab
 \end{itemize}
 
 \divider
 
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
+\cvevent{SOC Developer}{Engie}{September 2019 -- August 2020}{SAINT-OUEN, France}
+\begin{itemize}
+  \item Developed phishing detection capabilities for enterprise-level security systems, contributing to the overall SOC architecture.
+  \item Technical stack: Python, Resilient (IBM), Jira, Confluence, Docker
+\end{itemize}
 
-\medskip
+\divider
 
-\cvsection{A Day of My Life}
+\cvevent{Assistant Web Developer}{IDVroom}{July to August 2018}{ANGERS, France}
+\begin{itemize}
+  \item Contributed to the internationalization (i18n) of the website, gaining hands-on experience with the Model View Controller (MVC) architecture
+  % \item Worked on the Internationalization (i18n) of their website
+  % \item Learned a lot about the Model View Controller architecture
+  \item Technical stack: Zend, Jira, Scrum, Linux
+\end{itemize}
 
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
-  8/8em/accent!60/Daytime job,
-  2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
-}
+% \divider
+% \cvevent{Team Member}{Quick / McDonald's}{Summer 2016 / Summer 2017}{St Sylvain d'Anjou, France}
+% \begin{itemize}
+%   \item Prepared and cooked customer orders
+%   \item Discovered basics of the service industry
+% \end{itemize}
+%
+\cvsection{Education}
+
+\cvevent{Engineering School}{ESIEA, LAVAL}{Sept 2015 -- Sept 2020}{}
+\begin{itemize}
+ \item Information System domain, Cybersecurity major
+ \item Obtained with honors
+\end{itemize}
+
+\divider
+
+\cvevent{High school French scientific baccalaureate}{Lycée St Aubin la Salle}{June 2015}{}
+\begin{itemize}
+\item Mathematics specialty
+\item Obtained with honors
+\end{itemize}
 
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
-\newpage
-
-\cvsection{Publications}
-
-%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
-%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
-%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
-\mynames{Lim/Lian\bibnamedelima Tze,
-  Wong/Lian\bibnamedelima Tze,
-  Lim/Tracy,
-  Lim/L.\bibnamedelimi T.}
-%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
-\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-
-\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+% \newpage
 
 %% Switch to the right column. This will now automatically move to the second
 %% page if the content is too long.
 \switchcolumn
 
-\cvsection{My Life Philosophy}
+\cvsection{Projects}
 
-\begin{quote}
-``Something smart or heartfelt, preferably in one sentence.''
-\end{quote}
-
-\cvsection{Most Proud of}
-
-\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
-
-\divider
-
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+\cvevent{Rust Cryptography and System Projects}{Personal project}{December 2021 -- April 2023}{Home}
+\begin{itemize}
+  \item Self-taught Rust development, with a focus on cryptography, algorithm design, and system performance, to secure a position in software engineering.
+  % \item Learning Rust on my own to find a position as developer
+  % \item Projects: Cryptopals, Crafting Interpreters, Compression algorithms, AoC, Sudoku, Proxy, ...
+  \item Technical stack: Rust, Cargo, Cryptography papers
+\end{itemize}
 
 \divider
 
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+\cvevent{Learning Offensive Cybersecurity}{Personal project}{September 2020 -- February 2021}{Home}
+\begin{itemize}
+  \item Learning pentesting on my own via HackTheBox to find a position in the cybersecurity industry
+  \item Techniques: Web attacks, Cryptanalysis, Forensics, Reverse Engineering, Binary Exploitation
+  % \item Technical stack: Archlinux VM + blackarch, cutter, postman
+\end{itemize}
 
-\cvsection{Strengths}
+\divider
 
-% Don't overuse these \cvtag boxes — they're just eye-candies and not essential. If something doesn't fit on a single line, it probably works better as part of an itemized list (probably inlined itemized list), or just as a comma-separated list of strengths.
+\cvevent{Blockchain based DBMS}{Indian Statistical Institute}{April to August 2019}{KOLKATA, India}
+\begin{itemize}
+  \item Research project: implement a blockchain-based database
+  \item Discovered smart contracts and decentralized applications (DApps)
+  \item Technical stack: Ethereum, MariaDB, docker, Golang
+\end{itemize}
 
-\cvtag{Hard-working}
-\cvtag{Eye for detail}\\
-\cvtag{Motivator \& Leader}
+% \divider
+%
+% \cvevent{Security Operation Center (SOC)}{ESIEA}{4th year project}{LAVAL, France}
+% \begin{itemize}
+%   \item Setting up an open-source SOC for medium-sized companies
+%   \item This SOC will report cyber threats/attacks to my school
+% \end{itemize}
 
-\divider\smallskip
+\divider
 
-\cvtag{C++}
-\cvtag{Embedded Systems}\\
-\cvtag{Statistical Analysis}
+\cvevent{Cryptographic S-Boxes Analysis}{ESIEA}{3rd year project}{LAVAL, France}
+\begin{itemize}
+  \item Implemented a C/C++ library to evaluate and represent S-Boxes
+  \item Consolidated my cryptography-related algebra knowledge (Linear/Differential matrices, Algebraic Normal Form, ...)
+  \item Technical stack: C, C++, Linux
+\end{itemize}
+
+\divider
+
+\cvevent{One-dimensional Cubli}{ESIEA}{2nd year project}{LAVAL, France}
+\begin{itemize}
+  \item Reproduced a one-dimensional Cubli
+  \item Reinforced my choice of computer science over electronics
+  \item Technical stack: C, Arduino, Solidworks
+\end{itemize}
+
+
+\medskip
+
+% \cvsection{A Day of My Life}
+%
+% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% % \wheelchart{outer radius}{inner radius}{
+% % comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+
+% \cvsection{Publications}
+%
+% %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list.
+% %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+% %% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors.
+% \mynames{Lim/Lian\bibnamedelima Tze,
+%   Wong/Lian\bibnamedelima Tze,
+%   Lim/Tracy,
+%   Lim/L.\bibnamedelimi T.}
+% %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+%
+% \nocite{*}
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+%
+% \divider
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+%
+% \divider
+%
+% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+
+% \cvsection{My Life Philosophy}
+%
+% \begin{quote}
+% ``Something smart or heartfelt, preferably in one sentence.''
+% \end{quote}
+%
+% \cvsection{Most Proud of}
+%
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+%
+% \divider
+%
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+%
+% \divider
+%
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+%
+% \cvsection{Strengths}
+%
+% \cvtag{Hard-working}
+% \cvtag{Eye for detail}\\
+% \cvtag{Motivator \& Leader}
+%
+% \divider\smallskip
+%
+% \cvtag{C++}
+% \cvtag{Embedded Systems}\\
+% \cvtag{Statistical Analysis}
 
 \cvsection{Languages}
 
-\cvskill{English}{5}
+\cvskill{French}{5}
 \divider
 
-\cvskill{Spanish}{4}
+\cvskill{English}{4.5}
 \divider
 
-\cvskill{German}{3.5} %% Supports X.5 values.
+\cvskill{Spanish}{2.5} %% Supports X.5 values.
 
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
 %% \bigskip, \vspace etc to make adjustments.
-\medskip
+% \medskip
 
-\cvsection{Education}
 
-\cvevent{Ph.D.\ in Your Discipline}{Your University}{Sept 2002 -- June 2006}{}
-Thesis title: Wonderful Research
-
-\divider
-
-\cvevent{M.Sc.\ in Your Discipline}{Your University}{Sept 2001 -- June 2002}{}
-
-\divider
-
-\cvevent{B.Sc.\ in Your Discipline}{Stanford University}{Sept 1998 -- June 2001}{}
-
+% \clearpage
 % \divider
 
-\cvsection{Referees}
-
-% \cvref{name}{email}{mailing address}
-\cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-{Address Line 1\\Address line 2}
-
-\divider
-
-\cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
-{Address Line 1\\Address line 2}
+% \cvsection{Referees}
+%
+% % \cvref{name}{email}{mailing address}
+% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+% {Address Line 1\\Address line 2}
+%
+% \divider
+%
+% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
+% {Address Line 1\\Address line 2}
 
 
 \end{paracol}
